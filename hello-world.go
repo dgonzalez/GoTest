@@ -5,13 +5,16 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+
+	"github.com/Sigilita/GoTest/types"
 )
 
-func main() {
-	articles := Articles{
-		Article{Title: "Hello", Desc: "Article Description", Content: "Article Content"},
-		Article{Title: "Hello 2", Desc: "Article Description", Content: "Article Content"}}
+var articles types.Articles
 
+func main() {
+	articles = types.Articles{
+		types.Article{Title: "Hello", Desc: "Article Description", Content: "Article Content"},
+		types.Article{Title: "Hello 2", Desc: "Article Description", Content: "Article Content"}}
 	handleRequests()
 }
 
